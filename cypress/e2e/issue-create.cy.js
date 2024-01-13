@@ -22,12 +22,12 @@ describe('Issue create', () => {
           .trigger('click');
             
       //Type value to description input field
-      cy.get('.ql-editor').type('TEST_DESCRIPTION');
+      cy.get('.ql-editor').type(issueDescription);
 
       //Type value to title input field
       //Order of filling in the fields is first description, then title on purpose
       //Otherwise filling title first sometimes doesn't work due to web page implementation
-      cy.get('input[name="title"]').type('TEST_TITLE');
+      cy.get('input[name="title"]').click().type(issueTitle);
       
       //Select Lord Gaben from reporter dropdown
       cy.get('[data-testid="select:userIds"]').click();
@@ -53,7 +53,7 @@ describe('Issue create', () => {
           .should('have.length', '5')
           .first()
           .find('p')
-          .contains('TEST_TITLE');
+          .contains(issueTitle);
       //Assert that correct avatar and type icon are visible
       cy.get('[data-testid="avatar:Lord Gaben"]').should('be.visible');
       cy.get('[data-testid="icon:story"]').should('be.visible');
