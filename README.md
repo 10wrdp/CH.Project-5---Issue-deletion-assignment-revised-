@@ -27,3 +27,4 @@ npx cypress run --browser=chrome
 "# ASSIGNMENT-2-TIME-TRACKING-FUNCTIONALITY" 
 "# ASSIGNMENT-2-TIME-TRACKING-FUNCTIONALITY" 
 "# ASSIGNMENT-3-SOLVE-JAVASCRIPT-TASKS" 
+"# CH.Project-5---Issue-deletion-assignment-revised-" 
